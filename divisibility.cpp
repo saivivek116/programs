@@ -3,7 +3,7 @@
 using namespace std;
 main()
 {
-  long int i=150;
+  long int i=150;//here i took 150 as initial number to be verified loop starts with this number
   int x=0;
   while(1)
   {
