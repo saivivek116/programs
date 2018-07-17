@@ -1,3 +1,2 @@
 # programs
-hi am vivek
-hello
+hi i am vivek
