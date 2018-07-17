@@ -1,7 +1,11 @@
 // welcome to my repository 
 
 #include<stdio.h>
+#include<string.h>
 main()
 {
-  printf("hello");
+   char a[20];
+  printf("say hello");
+  scanf("%s",a);
+  printf(a);
  }
