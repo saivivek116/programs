@@ -5,7 +5,8 @@
 main()
 {
    char a[20];
-  printf("say hello");
+  printf("welcome to this repository");
+   printf("say hello");
   scanf("%s",a);
   printf(a);
  }
