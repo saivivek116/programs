@@ -18,7 +18,7 @@ class Dog
 			mydogs.remove(b);
 		}
 		thesize=mydogs.size();
-		System.out.println("the number of dog objects present in the arraylist is"+thesize);
+		System.out.println("The number of dog objects present in the arraylist is"+thesize);
 	}
 }
 
