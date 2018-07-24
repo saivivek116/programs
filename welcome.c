@@ -1,5 +1,6 @@
 // welcome to my repository 
 //i just updated from my local machine
+//sudo apt-get install flashplugin-installer pepperflashplugin-nonfree
 
 #include<stdio.h>
 #include<string.h>
