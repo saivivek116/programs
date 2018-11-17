@@ -1,52 +1,57 @@
 import java.util.*;
-class Quick
-{
-    public static void main(String ar[])
+class Quick{
+         int[] a=new int[100];
+         int n,i,p=1,q;
+    Quick()
     {
-        Quick q=new Quick();
         Scanner s=new Scanner(System.in);
-        System.out.print("Enter the size of array:");
-        int n=s.nextInt();
-        System.out.print("Enter the Elements in array:");
-        int a[]=new int[n];
-        for(int i=0;i<n;i++)
+        System.out.println("Enter the size of the input array\n");
+        n=s.nextInt();
+        q=n;
+        System.out.println("Enter the numbers\n");
+        for(i=1;i<=n;i++)
+        {
             a[i]=s.nextInt();
-        q.sort(a,0,n-1);
-        for(int i=0;i<n;i++)
-            System.out.print(a[i]+" ");
-            
+           }
     }
-    public void sort(int[] a,int low,int high)
+    public static void main(String args[])
     {
-        //int mid=(low+high)/2;
-        if(low<high)
+    int w;
+        Quick q=new Quick();
+        q.quick(q.a,q.p,q.q);
+        for(w=1;w<=q.n;w++)
         {
-            int m=part(a,low,high);
-            sort(a,low,m-1);
-            sort(a,m+1,high);
+            System.out.print(q.a[w]+" ");
         }
-    }
-    public int part(int[] a,int i,int q)
-    {
-        int k=a[i];
-        int p=i+1;
-        //System.out.print(q+" * "+p+" *\n");
-        while(q>p)
+        }
+        public void quick(int[] a,int p,int q)
         {
-            while(k>a[p])
-                p++;
-            while(k<a[q])
-                q--;
-            if(q>p)
+            int r;
+            if(p<q)
             {
-                int t=a[q];
-                a[q]=a[p];
-                a[p]=t;
+                r=partition(a,p,q);
+                quick(a,p,r-1);
+                quick(a,r+1,q);
             }
-        }
-        int t=a[q];
-        a[q]=k;
-        a[i]=t;
-        return q;
-    }
-}
+           }
+        public int partition(int[] a,int p,int q)
+         {
+         int j;
+            int x=a[q];
+            int in=p-1;
+            for(j=p;j<=q-1;j++)
+            {
+                if(a[j]<=x)
+                {
+                    in=in+1;
+                    int sw=a[in];
+                    a[in]=a[j];
+                    a[j]=sw;
+                   }
+               }
+               int sw=a[in+1];
+               a[in+1]=a[q];
+               a[q]=sw;
+               return in+1;
+            }          
+ }
