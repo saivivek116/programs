@@ -1,0 +1,16 @@
+
+//first u have to enter into users system and check the files, where it is located so that u will discover the path of the file 
+//them come back to local host and use scp commands which i have mentioned below.
+
+
+//To get the files from remote machine
+scp user@ip:/path .
+//TO send files to remote machine 
+scp test.txt user@ip:
+//send directory to remote
+scp -r /home/path user@ip:
+//get directory 
+scp -r user@ip:/pth .
+
+
+
